@@ -1,41 +1,26 @@
-# QMX — Qamar AI (Phase 1)
+# QMX | Qamar AI — Phase 2 prototype
 
-A starter web application for an independent document-readiness assistant.
-
-## Included in Phase 1
-- Responsive Arabic landing page
-- Department and transaction selection
-- Multi-file upload
-- Basic file checks: extension, empty file, 10MB limit
-- Simple results report
-- Health endpoint for hosting checks
-- Render deployment blueprint
-
-## Important limitations
-This is a prototype, not a production government service. It does not authenticate documents, determine legal validity, or confirm official acceptance. Department and transaction options are illustrative demo data. Verify every requirement against the relevant official source before production.
+Arabic-first prototype for preliminary document-readiness checks.
 
 ## Run locally
+
 ```bash
 python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# macOS/Linux:
-source .venv/bin/activate
-
+source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
 pip install -r requirements.txt
 uvicorn app:app --reload
 ```
+
 Open http://127.0.0.1:8000
 
-## Deploy on Render
-1. Create a GitHub repository named `QMX`.
-2. Upload the contents of this folder to the repository root.
-3. In Render, choose **New + → Blueprint** (or create a Web Service).
-4. Connect the GitHub repository. Render reads `render.yaml`.
-5. Deploy and open the generated `onrender.com` URL.
+## Phase 2 changes
+- Validates file format, size, empty files and image readability/dimensions.
+- Extracts selectable text from PDF files where possible.
+- Uses a small illustrative keyword checklist for one demo scenario (Ministry of Foreign Affairs / document attestation).
+- Reports possible text indicators, insufficient evidence, mismatches, and technical file problems separately.
+- Removes the misleading overall pass percentage.
 
-## Roadmap
-- Phase 2: real database, user accounts, saved applications, bilingual UI
-- Phase 3: PDF text extraction, OCR, image-quality analysis, structured checks
-- Phase 4: AI assistant and explainable review reports
-- Phase 5: admin console, requirements management, analytics, security hardening
+## Important limitations
+This is a hackathon/demo prototype, not an official UAE government service. The demo keywords are invented for software demonstration and are not official requirements. It does not authenticate documents, verify signatures/stamps, establish legal validity, or predict government acceptance. Image OCR is not enabled in this version; images without readable extracted text are flagged for manual review. Do not upload sensitive personal documents to a public demo deployment.
+
+Before real-world use, requirements must be verified with official sources, and the system needs OCR, robust document classification, privacy/security controls, retention policies, access control, monitoring, and human review.
