@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QMX Qamar AI — مساعد ذكي لمراجعة المستندات قبل تقديم المعاملات.">
+  <title>QMX | Qamar AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">Q</span><span><b>QMX</b><small>QAMAR AI</small></span></a>
+  <nav><a href="#how">كيف يعمل</a><a href="#check">ابدأ الفحص</a><a href="#about">عن المنصة</a></nav>
+  <button class="lang" id="langBtn">EN</button>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow"><span></span> DOCUMENT INTELLIGENCE PLATFORM</div>
+      <h1>جهّز مستنداتك<br><em>بثقة ووضوح.</em></h1>
+      <p>مساعد ذكي يساعدك على مراجعة ملفاتك واكتشاف المشكلات الأولية قبل تقديم معاملتك.</p>
+      <a class="primary" href="#check">ابدأ مراجعة مستنداتك <span>←</span></a>
+      <div class="trust"><span>✦</span> تجربة أولية مستقلة — ليست خدمة حكومية رسمية</div>
+    </div>
+    <div class="hero-art">
+      <div class="orb"></div><div class="glass-card card-one"><span class="file-icon">PDF</span><div><b>Document review</b><small>مراجعة المستندات</small></div><span class="check">✓</span></div>
+      <div class="glass-card card-two"><span class="spark">✦</span><div><b>AI assistance</b><small>مساعدة ذكية</small></div></div>
+      <div class="hero-logo">Q<span>M</span>X</div>
+    </div>
+  </section>
+
+  <section class="steps" id="how">
+    <div><span>01</span><b>اختر الجهة والمعاملة</b><small>حدد نوع الخدمة التي تستعد لها</small></div>
+    <div><span>02</span><b>ارفع المستندات</b><small>أضف ملفاتك بطريقة آمنة</small></div>
+    <div><span>03</span><b>راجع التقرير</b><small>اطّلع على الملاحظات الأولية</small></div>
+  </section>
+
+  <section class="checker" id="check">
+    <div class="section-heading"><div class="eyebrow">START YOUR REVIEW</div><h2>ابدأ فحص المستندات</h2><p>اختر الجهة ونوع المعاملة، ثم أرفق الملفات التي تريد مراجعتها.</p></div>
+    <form id="reviewForm">
+      <div class="form-grid">
+        <label>الجهة <select id="department" name="department" required>
+          <option value="">اختر الجهة</option>
+          <option>وزارة الخارجية</option><option>الهيئة الاتحادية للهوية والجنسية والجمارك وأمن المنافذ</option>
+          <option>هيئة الطرق والمواصلات (RTA)</option><option>وزارة العدل</option><option>وزارة التربية والتعليم</option><option>جهة أخرى</option>
+        </select></label>
+        <label>نوع المعاملة <select id="transaction" name="transaction" required>
+          <option value="">اختر نوع المعاملة</option><option>تصديق مستند</option><option>إصدار أو تجديد وثيقة</option><option>طلب إقامة</option><option>معاملة مرورية</option><option>معاملة تعليمية</option><option>أخرى</option>
+        </select></label>
+      </div>
+      <label class="upload" id="dropZone">
+        <input type="file" id="documents" name="documents" multiple accept=".pdf,.png,.jpg,.jpeg" required>
+        <span class="upload-symbol">↑</span><b>اسحب ملفاتك هنا أو اضغط للاختيار</b><small>PDF أو JPG أو PNG — حتى 10MB لكل ملف</small>
+        <div id="fileNames" class="file-names">لم يتم اختيار ملفات بعد</div>
+      </label>
+      <button class="submit" type="submit" id="submitBtn">ابدأ الفحص التجريبي <span>←</span></button>
+    </form>
+    <div id="results" class="results" hidden></div>
+  </section>
+
+  <section class="about" id="about"><div><div class="eyebrow">ABOUT QMX</div><h2>تقنية أوضح.<br><em>استعداد أفضل.</em></h2></div><p>QMX مشروع تقني مستقل يهدف إلى تسهيل الاستعداد للمعاملات من خلال أدوات مساعدة لمراجعة الملفات. لا يتبع أي جهة حكومية ولا يملك تكاملاً رسمياً معها.</p></section>
+</main>
+<footer><div class="brand"><span class="brand-mark">Q</span><span><b>QMX</b><small>QAMAR AI</small></span></div><small>© 2026 QMX. جميع الحقوق محفوظة.</small><small>منصة مستقلة — لا تمثل أي جهة حكومية.</small></footer>
+<script src="/static/app.js"></script>
+</body></html>
